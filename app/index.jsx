@@ -7,7 +7,7 @@ export default function Home() {
 
             <Image
                 source={require('../assets/images/garraHome.jpeg')}
-                style={styles.imagem}/>
+                style={styles.imagem} />
 
             <View style={styles.containerTitulo}>
                 <Text style={styles.title}>Seja bem vindo ao site da <br /> Rodriga Garra</Text>
@@ -29,7 +29,6 @@ export default function Home() {
             </View >
 
             <Link href="/termos" > <p style={styles.textTermos}>Termos de uso</p></Link>
-
 
         </View>
     );

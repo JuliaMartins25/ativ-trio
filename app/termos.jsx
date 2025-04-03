@@ -69,20 +69,34 @@ export default function TermosDeUso() {
         <Text style={styles.sectionTitle}>6. Contato</Text>
         <Text style={styles.sectionText}>
           Se você tiver alguma dúvida sobre estes Termos de Uso, entre em
-          contato conosco através dos nossos e-mail:
+          contato conosco através dos nossos e-mail's: <br />
           gabriela.f.barbosa@aluno.senai.br
 
           julia.a.martins7@aluno.senai.br
-          
+
           vincius.valverde@aluno.senai.br
         </Text>
       </View>
 
-      <Link href="/" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Voltar para Home</Text>
-        </Pressable>
-      </Link>
+      <View style={styles.containerLinks}>
+
+        <Link href="/" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Ir para Home</Text>
+          </Pressable>
+        </Link>
+        <Link href="/login" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Login</Text>
+          </Pressable>
+        </Link>
+        <Link href="/about" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Ir para Sobre</Text>
+          </Pressable>
+        </Link>
+
+      </View>
     </ScrollView>
   );
 }
@@ -136,5 +150,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: "center",
     fontWeight: "bold",
+  },
+  containerLinks: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
 });

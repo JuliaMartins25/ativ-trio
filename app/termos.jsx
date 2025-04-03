@@ -69,7 +69,7 @@ export default function TermosDeUso() {
         <Text style={styles.sectionTitle}>6. Contato</Text>
         <Text style={styles.sectionText}>
           Se você tiver alguma dúvida sobre estes Termos de Uso, entre em
-          contato conosco através dos nossos e-mail's: <br />
+          contato conosco através dos nossos e-mail's: {'\n'}
           gabriela.f.barbosa@aluno.senai.br
 
           julia.a.martins7@aluno.senai.br

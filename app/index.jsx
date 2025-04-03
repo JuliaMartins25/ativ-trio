@@ -15,7 +15,7 @@ export default function Home() {
 
             <View style={styles.containerLinks}>
 
-                <Link href="/about" asChild>
+                <Link href="/login" asChild>
                     <Pressable style={styles.button}>
                         <Text style={styles.buttonText}>Login</Text>
                     </Pressable>

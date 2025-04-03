@@ -5,57 +5,56 @@ import { Link } from 'expo-router';
 export default function TermosDeUso() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
+
       <Text style={styles.title}>Sobre mim</Text>
-      <Image source={require('../assets/images/rodrigaSobre.jpeg')} 
-      style={{
-        width: "80%", 
-        height: 700,
-        borderRadius: 10,
-        alignSelf: 'center', 
-        marginBottom: 20 
-      }} 
-       />
-     
+
+      <Image style={styles.imagem} source={require('../assets/images/rodrigaSobre.jpeg')} />
+
       <View style={styles.section}>
         <Text style={styles.sectionTitle}></Text>
         <Text style={styles.sectionText}>
-        Olá! Eu sou a Rodriga Garra, a adorável hamster da casa! Sou uma pequena bolinha de pelos macios e olhos brilhantes, e trago muita alegria e diversão para a vida da minha humana.
+          Olá! Eu sou a Rodriga Garra, a adorável hamster da casa! Sou uma pequena bolinha de pelos macios e olhos brilhantes, e trago muita alegria e diversão para a vida da minha humana.
         </Text>
       </View>
-     
+
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Personalidade</Text>
         <Text style={styles.sectionText}>
-        Sou extremamente curiosa e adoro explorar meu ambiente. Passo horas passeando pelo tubo da minha gaiola. Às vezes, posso ser um pouco tímida, mas assim que me sinto confortável, é impossível não me ver em ação com minhas travessuras!
+          Sou extremamente curiosa e adoro explorar meu ambiente. Passo horas passeando pelo tubo da minha gaiola. Às vezes, posso ser um pouco tímida, mas assim que me sinto confortável, é impossível não me ver em ação com minhas travessuras!
         </Text>
       </View>
-     
+
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Momentos Especiais</Text>
         <Text style={styles.sectionText}>
-        Um dos meus momentos favoritos é quando me deixam sair para brincar fora da gaiola. Eu adoro correr livremente, explorando o chão e me aventurando por pequenos obstáculos. É sempre tão divertido interagir com meus brinquedos e, às vezes, até com outros pets da casa!
+          Um dos meus momentos favoritos é quando me deixam sair para brincar fora da gaiola. Eu adoro correr livremente, explorando o chão e me aventurando por pequenos obstáculos. É sempre tão divertido interagir com meus brinquedos e, às vezes, até com outros pets da casa!
         </Text>
       </View>
-     
+
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Conclusão</Text>
         <Text style={styles.sectionText}>
-        Ser a Rodriga Garra é uma experiência incrível e cheia de amor. Eu não sou apenas um animal de estimação, mas uma verdadeira amiga que traz sorrisos e momentos de alegria. Estou sempre pronta para novas aventuras e espero que minha humana continue aprendendo a cuidar de mim, garantindo que eu tenha uma vida feliz e saudável!
+          Ser a Rodriga Garra é uma experiência incrível e cheia de amor. Eu não sou apenas um animal de estimação, mas uma verdadeira amiga que traz sorrisos e momentos de alegria. Estou sempre pronta para novas aventuras e espero que minha humana continue aprendendo a cuidar de mim, garantindo que eu tenha uma vida feliz e saudável!
         </Text>
       </View>
-     
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Conclusão</Text>
-        <Text style={styles.sectionText}>
-          Reservamos o direito de modificar estes termos a qualquer momento. As alterações serão comunicadas aos usuários.
-        </Text>
+
+      <View style={styles.containerLinks}>
+
+        <Link href="/" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Voltar para Home</Text>
+          </Pressable>
+        </Link>
+        <Link href="/login" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Login</Text>
+          </Pressable>
+        </Link>
+
+        <Link href="/termos" > <p style={styles.textTermos}>Termos de uso</p></Link>
+
       </View>
-     
-      <Link href="/" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Voltar para Home</Text>
-        </Pressable>
-      </Link>
+
     </ScrollView>
   );
 }
@@ -65,6 +64,13 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
     backgroundColor: '#f5f5f5',
+  },
+  imagem: {
+    width: "100%",
+    height: 300,
+    borderRadius: 10,
+    alignSelf: 'center',
+    marginBottom: 20
   },
   title: {
     fontSize: 24,
@@ -108,5 +114,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     fontWeight: 'bold',
+  },
+  containerLinks: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  textTermos: {
+    color: '#8C1CD6',
+    fontWeight: 'bold',
+    marginTop: 20,
   },
 });

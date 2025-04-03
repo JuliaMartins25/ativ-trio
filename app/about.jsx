@@ -6,7 +6,7 @@ export default function TermosDeUso() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Sobre mim</Text>
-      <Image source={require('../assets/rodrigaSobre.jpeg')} 
+      <Image source={require('../assets/images/rodrigaSobre.jpeg')} 
       style={{
         width: "80%", 
         height: 700,

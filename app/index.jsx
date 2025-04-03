@@ -10,7 +10,7 @@ export default function Home() {
                 style={styles.imagem} />
 
             <View style={styles.containerTitulo}>
-                <Text style={styles.title}>Seja bem vindo ao site da <br /> Rodriga Garra</Text>
+                <Text style={styles.title}>Seja bem vindo ao site da {'\n'} Rodriga Garra</Text>
             </View>
 
             <View style={styles.containerLinks}>
@@ -28,7 +28,7 @@ export default function Home() {
 
             </View >
 
-            <Link href="/termos" > <p style={styles.textTermos}>Termos de uso</p></Link>
+            <Link href="/termos" > <Text style={styles.textTermos}>Termos de uso</Text></Link>
 
         </View>
     );
